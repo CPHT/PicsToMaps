@@ -26,7 +26,7 @@ var mapMaxZoom = 21;
 //the custom layer
 var layer = new ol.layer.Tile({
   source: new ol.source.XYZ({
-    // Change 'y' in {z}/{x}/{y} to {z}/{x}/{-y}. Reason: ODM outputs in TSM scheme while openlayers uses xyz, simple conversion is to invert the y.
+    // Change 'y' in {z}/{x}/{y} to '-y' {z}/{x}/{-y}. Reason: ODM outputs in TSM scheme while openlayers uses xyz, simple conversion is to invert the y.
     url: "https://s3.amazonaws.com/geotiff-map-tiles/OpenLayer-Tiles/WebODM-Tiles/Tiles/{z}/{x}/{-y}.png",
   })
 });
